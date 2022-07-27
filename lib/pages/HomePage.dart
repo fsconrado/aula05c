@@ -1,3 +1,4 @@
+import 'package:aula05b/pages/FormularioTransferenciaPage.dart';
 import 'package:flutter/material.dart';
 
 
@@ -9,7 +10,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Bank Transferências")),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>FormularioTransferenciaPage()
+          ),);
+        },
         child: Icon(Icons.add),
       ),
       body: ListaTrasnferencias(),
